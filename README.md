@@ -1,7 +1,6 @@
 # Structured-Information Field Dynamics (SIFD)
 **A minimal, experimentally testable extension of quantum field theory coupling scalar fields to structured information operators**
-
-Author: Elysha Branson  
+ 
 Status: Complete, falsifiable theoretical framework  
 License: CC BY 4.0
 
