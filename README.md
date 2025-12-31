@@ -7,7 +7,7 @@ License: CC BY 4.0
 
 ---
 
-## Abstract
+Abstract
 
 We propose a minimal, experimentally testable extension of quantum field theory in which one or more real scalar fields couple to Hermitian, operationally defined structured information operators derived from measurable properties of physical systems. This framework is a strict extension: it recovers standard quantum dynamics exactly in the limit of vanishing coupling.
 
@@ -17,7 +17,7 @@ Non-observation of the predicted effects constrains or rules out the proposed co
 
 ---
 
-## 1. Motivation
+1. Motivation
 
 Quantum field theory successfully describes fundamental interactions but treats information as bookkeeping rather than as a potential dynamical quantity.
 
@@ -25,202 +25,126 @@ Quantum information science demonstrates that correlations, coherence, and persi
 
 This framework addresses the narrow, testable question:
 
-> Can persistent, structured information in physical systems act as a source term for additional dynamical degrees of freedom without modifying standard quantum theory?
+Can persistent, structured information in physical systems act as a source term for additional dynamical degrees of freedom without modifying standard quantum theory?
+
+No assumptions are made about subjective experience or agency.
 
 ---
 
-## 2. Scope and Non-Claims
+2. Scope and Non-Claims
 
 This framework is not:
 
-- A theory of consciousness or subjective experience  
-- A collapse model  
-- A modification of the Born rule  
-- An ontological interpretation of quantum mechanics  
+• A theory of consciousness or subjective experience  
+• A collapse model  
+• A modification of the Born rule  
+• An ontological interpretation of quantum mechanics  
 
 It is a conservative effective field theory extension designed solely for empirical falsification.
 
 ---
 
-## 3. Field Content and Action
+3. Field Content and Action
 
-Introduce one or more real scalar fields \( C_i(x) \) on Minkowski spacetime.
+Introduce one or more real scalar fields C_i(x) on Minkowski spacetime.
 
-The action is:
-
-\[
-\begin{aligned}
-S = \int d^4x \Big[
-& \mathcal{L}_{\text{standard}} \\
-& + \sum_i \left(
-\frac{1}{2} \partial_\mu C_i \, \partial^\mu C_i
-- \frac{1}{2} m_i^2 C_i^2
-\right) \\
-& - V_{\text{int}}(C_i) \\
-& + \sum_i \epsilon_i \, C_i(x)\, O_{\text{info}}(x)
-\Big]
-\end{aligned}
-\]
+```text
+S = ∫ d^4x [
+  L_standard
+  + Σ_i ( 1/2 ∂_μ C_i ∂^μ C_i − 1/2 m_i^2 C_i^2 )
+  − V_int(C_i)
+  + Σ_i ε_i C_i(x) O_info(x)
+]
+```
 
 Where:
 
-- \( \mathcal{L}_{\text{standard}} \) is the baseline QFT Lagrangian  
-- \( V_{\text{int}}(C_i) \) is a bounded self-interaction ensuring vacuum stability  
-- \( \epsilon_i \) are small EFT couplings  
-- \( O_{\text{info}}(x) \) is a renormalized, Hermitian scalar operator  
+• L_standard is the baseline QFT Lagrangian  
+• V_int(C_i) is a bounded self-interaction ensuring vacuum stability  
+• ε_i are small EFT couplings  
+• O_info(x) is a renormalized, Hermitian scalar operator  
 
 ---
 
-## 4. Dimensional Normalization
+4. Dimensional Normalization
 
-Units: \( \hbar = c = 1 \)
+Units: ℏ = c = 1
 
-\[
-[C_i] = 1,
-\qquad
-[O_{\text{info}}] = 3,
-\qquad
-[\epsilon_i] = 0
-\]
-
-Normalization:
-
-\[
-O_{\text{info}} =
-\frac{1}{\Lambda_{\text{info}}^{3}}
-\, O_{\text{info}}^{\text{bare}}
-\]
-
-The reference scale \( \Lambda_{\text{info}} \) is fixed experimentally by calibration to a known reference configuration.
+```text
+[C_i] = 1
+[O_info] = 3
+[ε_i] = 0
+```
 
 ---
 
-## 5. Lorentz / Frame Definition
+5. Lorentz / Frame Definition
 
-SIFD is explicitly an **open-system, laboratory-frame EFT**.
+SIFD is explicitly an open-system, laboratory-frame EFT.
 
-- \( O_{\text{info}}(x) \) is defined in the rest frame of the experimental apparatus  
-- Full Lorentz covariance is not assumed for \( O_{\text{info}} \)  
-- The scalar fields \( C_i \) remain relativistic  
+• O_info(x) is defined in the rest frame of the experimental apparatus  
+• Full Lorentz covariance is not assumed for O_info  
+• The scalar fields C_i remain relativistic  
 
 ---
 
-## 6. Structured Information Operator
+6. Structured Information Operator (Operational Definition)
 
-\[
-O_{\text{info}}(x)
-=
-Z_{\text{info}}^{-1}
-\nabla^2
-\left\langle
-\rho_{\text{info}}(x)
-\right\rangle_{\text{smooth}}
-\]
+```text
+O_info(x) = Z_info^−1 ∇^2 ⟨ ρ_info(x) ⟩_smooth
+```
 
 Where:
 
-- \( \rho_{\text{info}} \) is built from reduced density matrices, correlation functions, or coherence measures  
-- \( \langle \cdot \rangle_{\text{smooth}} \) denotes coarse-graining over scale \( \ell \)  
-- \( Z_{\text{info}} \) is a renormalization constant  
-
-Noise-resistance criteria:
-
-- Persistence time \( \tau_p \gg \tau_{\text{noise}} \)  
-- Spectral support below cutoff \( \omega_c \)  
-- Stability under randomization at \( \ge N\sigma \)
+• ρ_info is constructed from reduced density matrices, correlation functions, or coherence measures  
+• ⟨…⟩_smooth denotes coarse-graining over a fixed scale  
+• Z_info is a composite-operator renormalization constant  
 
 ---
 
-## 7. Composite Operator Renormalization
+7. Equations of Motion
 
-- \( O_{\text{info}} \) treated as a composite operator  
-- UV divergences absorbed into \( Z_{\text{info}} \)  
-- Allowed counterterms: \( C_i^2 \), \( C_i O_{\text{info}} \)  
-- No new operators generated below cutoff  
+Scalar field equation:
 
----
+```text
+□ C_i + m_i^2 C_i + ∂V_int / ∂C_i = − ε_i O_info(x)
+```
 
-## 8. Back-Reaction Ordering
+Density matrix evolution:
 
-Default experimental regime:
+```text
+dρ/dt = −i [ H_standard + Σ_i ε_i C_i(x) O_info(x) , ρ ]
+```
 
-- \( O_{\text{info}} \) computed at zeroth order  
-- \( C_i \) sourced by \( O_{\text{info}} \)
-
-Optional extension:
-
-- Retarded response included perturbatively at \( O(\epsilon^2) \)
+Hermiticity of O_info ensures unitarity.
 
 ---
 
-## 9. Equations of Motion
+8. Recovery of Standard Physics
 
-\[
-\Box C_i + m_i^2 C_i
-+ \frac{\partial V_{\text{int}}}{\partial C_i}
-= - \epsilon_i \, O_{\text{info}}(x)
-\]
+In the strict limit:
 
-\[
-\frac{d\rho}{dt}
-=
-- i
-\left[
-H_{\text{standard}}
-+ \sum_i \epsilon_i C_i O_{\text{info}},
-\rho
-\right]
-\]
+```text
+ε_i → 0
+```
+
+All new terms vanish identically and standard quantum mechanics and quantum field theory are recovered exactly.
 
 ---
 
-## 10. EFT Validity
+9. Falsifiability
 
-\[
-E \ll \Lambda_{\text{info}},
-\qquad
-L \gg \Lambda_{\text{info}}^{-1},
-\qquad
-\tau \gg \ell
-\]
+Null hypothesis:
 
----
+```text
+ε_i = 0
+```
 
-## 11. Worked Instantiation
-
-\[
-\rho_{\text{info}} = |\rho_{01}|^2
-\]
-
-\[
-O_{\text{info}} \approx -k^2 |\rho_{01}|^2
-\]
-
-\[
-\epsilon = 10^{-3},
-\qquad
-T_2 = 50\,\mu\text{s}
-\]
-
-\[
-\Delta T_2 \approx -1\,\mu\text{s}
-\]
-
-Null result implies \( \epsilon < 10^{-4} \).
+Non-observation of deviations constrains or rules out the framework.
 
 ---
 
-## 12. Recovery Limit
-
-\[
-\epsilon_i \rightarrow 0
-\quad \Rightarrow \quad
-\text{Standard QM/QFT recovered exactly}
-\]
-
----
-
-## References
+References
 
 Peskin & Schroeder (1995)  
 Nielsen & Chuang (2010)  
