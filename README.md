@@ -1,4 +1,4 @@
-## Structured-Information Field Dynamics (SIFD)
+## Structured Information Field Dynamics (SIFD)
 
 ![SIFD Diagram](file_0000000083bc71f79578d9abf3dc47f7.png)
 
