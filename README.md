@@ -1,4 +1,5 @@
-# A Scalar Field Extension of Quantum Field Theory Coupled to Structured Information Operators
+# Structured-Information Field Dynamics (SIFD)
+**A minimal, experimentally testable extension of quantum field theory coupling scalar fields to structured information operators**
 
 Author: Elysha Branson  
 Status: Complete, falsifiable theoretical framework  
