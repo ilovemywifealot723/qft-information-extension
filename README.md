@@ -1,5 +1,7 @@
 ## Structured Information Field Dynamics (SIFD)
 
+*Information is not merely descriptive — it is physically real. SIFD formalizes this, treating structured information as a measurable, causal component of physical systems.*
+
 ![SIFD Diagram](file_0000000083bc71f79578d9abf3dc47f7.png)
 
 A minimal, experimentally testable extension of quantum field theory coupling scalar fields to structured information operators
