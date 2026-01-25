@@ -37,7 +37,7 @@ No assumptions are made about subjective experience or agency.
 
 ### Foundational Rationale
 
-Quantum Field Theory predicts how fields behave but not why they act at all. If QFT is truly fundamental, stopping at behavior leaves a gap: the origin of interaction itself is unexplained. SIFD fills this gap by treating structured, measurable information as a dynamical input, formalizing what it means for a field to respond to a system. This makes SIFD not just an extension of QFT, but a necessary step toward understanding the very basis of physical action.
+Quantum Field Theory predicts how fields behave but not why they act at all. If QFT is truly fundamental, stopping at behavior leaves a gap: the origin of interaction itself is unexplained. SIFD addresses this gap by treating structured, measurable information as a dynamical input, formalizing what it means for a field to respond to a system. This makes SIFD not just an extension of QFT, but a necessary step toward understanding the basis of physical action.
 
 ---
 
