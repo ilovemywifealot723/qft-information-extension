@@ -137,4 +137,4 @@ Empirical verification operationally enforces the ontology.
 3. Schlosshauer, M. (2007) *Decoherence and the Quantum-To-Classical Transition*  
 4. Devoret, M. & Schoelkopf (2004) *Superconducting Circuits for Quantum Information*  
 5. Rechtsman, M. et al. (2013) *Topological Photonics: Experimental Review*
-6. 
+   
