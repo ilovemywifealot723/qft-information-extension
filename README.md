@@ -164,8 +164,6 @@ SIFD provides a **minimal, rigorous, covariant scalar-field framework** in which
 3. Gradients of the information functional reproduce emergent interactions  
 4. Explicit solutions (Gaussian loops) demonstrate recurrence, stability, and force generation  
 
-This manuscript is **fully ready for mainstream physics journal submission**.
-
 ---
 
 ## References
