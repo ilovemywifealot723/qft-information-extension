@@ -24,22 +24,22 @@ Let the full Hilbert space be:
 \mathcal{H} = \bigotimes_{i=1}^{L} \mathcal{H}_i, \quad \dim \mathcal{H}_i \ge 2
 ```
 
-where $\mathcal{H}_i$ are internal factor spaces. Define the weighted mutual information functional:
+where `\mathcal{H}_i` are internal factor spaces. Define the weighted mutual information functional:
 
 ```
-\mathcal{I}[|\Omega\rangle] = \sum_{i<j} \frac{w_{ij}}{|i-j|^\alpha} \left[ S(\rho_i) + S(\rho_j) - S(\rho_{ij}) \right] - \lambda \langle H \rangle
+\mathcal{I}[|\Omega\rangle] = \sum_{i<j} \frac{w_{ij}}{|i-j|^\alpha} [ S(\rho_i) + S(\rho_j) - S(\rho_{ij}) ] - \lambda \langle H \rangle
 ```
 
-with $S(\rho)=-\mathrm{Tr}[\rho \ln \rho]$, and a simple nearest-neighbor Hamiltonian:
+with `S(\rho) = -Tr[ρ ln ρ]`, and a simple nearest-neighbor Hamiltonian:
 
 ```
-H = \sum_{i<j} J_{ij} \sigma_i^x \sigma_j^x
+H = \sum_{i<j} J_{ij} σ_i^x σ_j^x
 ```
 
-Parameters $w_{ij}$, $J_{ij}$, and $\lambda$ control correlation strength. Extremization:
+Parameters `w_{ij}`, `J_{ij}`, and `λ` control correlation strength. Extremization:
 
 ```
-\delta \mathcal{I}[|\Omega\rangle] = 0
+δ \mathcal{I}[|\Omega\rangle] = 0
 ```
 
 produces critical long-range correlated states.
@@ -58,7 +58,7 @@ produces critical long-range correlated states.
 Mutual information decay defines an emergent metric:
 
 ```
-g_{ij} \sim \frac{1}{I(i:j)}
+g_{ij} ∼ 1 / I(i:j)
 ```
 
 ![Emergent metric](emergent_metric.png)  
@@ -69,7 +69,7 @@ g_{ij} \sim \frac{1}{I(i:j)}
 ## 5. Linearized Excitations and Lorentz Invariance
 
 ![Linearized spectrum](linear_spectrum.png)  
-*Figure 3: Linearized excitation spectrum. Solid blue = $\omega \propto k$; dashed red = small deviations.*
+*Figure 3: Linearized excitation spectrum. Solid blue = ω ∝ k; dashed red = small deviations.*
 
 ---
 
@@ -78,10 +78,10 @@ g_{ij} \sim \frac{1}{I(i:j)}
 Spinor excitations arise from internal 2-level factors:
 
 ```
-|\psi_\alpha(x)\rangle = \sum_i f_\alpha(i) |\phi_i\rangle \otimes |\sigma_i\rangle
+|\psi_α(x)⟩ = ∑_i f_α(i) |φ_i⟩ ⊗ |σ_i⟩
 ```
 
-Anomaly cancellation uniquely selects the SU(3)$\times$SU(2)$\times$U(1) gauge group.
+Anomaly cancellation uniquely selects the `SU(3)×SU(2)×U(1)` gauge group.
 
 ---
 
@@ -90,14 +90,14 @@ Anomaly cancellation uniquely selects the SU(3)$\times$SU(2)$\times$U(1) gauge g
 Fermion bilinears generate scalar fields:
 
 ```
-\Phi(x) \sim \langle \bar{\psi}_L(x) \psi_R(x) \rangle
+Φ(x) ∼ ⟨ ψ̄_L(x) ψ_R(x) ⟩
 ```
 
 with Lagrangian:
 
 ```
-\mathcal{L}_\Phi = (D_\mu \Phi)^\dagger (D^\mu \Phi) - V(\Phi), \quad
-V(\Phi) = -\mu^2 \Phi^\dagger \Phi + \lambda (\Phi^\dagger \Phi)^2
+L_Φ = (D_μ Φ)† (D^μ Φ) - V(Φ),  
+V(Φ) = -μ² Φ† Φ + λ (Φ† Φ)²
 ```
 
 ---
@@ -107,13 +107,13 @@ V(\Phi) = -\mu^2 \Phi^\dagger \Phi + \lambda (\Phi^\dagger \Phi)^2
 Energy-momentum of localized excitations defines an emergent metric:
 
 ```
-T_{\mu\nu} = -\frac{2}{\sqrt{-g}} \frac{\delta (\sqrt{-g} \mathcal{L}_{\rm matter})}{\delta g^{\mu\nu}}
+T_{μν} = -2 / √(-g) δ(√(-g) L_matter) / δ g^{μν}
 ```
 
 Linearized Einstein equations:
 
 ```
-\Box h_{\mu\nu} - \partial_\mu \partial^\alpha h_{\alpha\nu} - \partial_\nu \partial^\alpha h_{\alpha\mu} + \partial_\mu \partial_\nu h^\alpha_\alpha = 16\pi G T_{\mu\nu}
+□ h_{μν} - ∂_μ ∂^α h_{αν} - ∂_ν ∂^α h_{αμ} + ∂_μ ∂_ν h^α_α = 16 π G T_{μν}
 ```
 
 ---
