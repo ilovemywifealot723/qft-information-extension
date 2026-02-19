@@ -48,7 +48,7 @@ produces critical long-range correlated states.
 
 ## 3. Tensor-Network Representation
 
-![Tensor network](image/factor_network.png)  
+![Tensor network](factor_network.png)  
 *Figure 1: Tensor-network factor network producing emergent fields. Nodes = Hilbert space factors; edges = correlations; arrows = generation of chiral fermions, gauge fields, scalar/Higgs fields.*
 
 ---
@@ -61,14 +61,14 @@ Mutual information decay defines an emergent metric:
 g_{ij} \sim \frac{1}{I(i:j)}
 ```
 
-![Emergent metric](image/emergent_metric.png)  
+![Emergent metric](emergent_metric.png)  
 *Figure 2: Emergent metric from entanglement. Edge thickness encodes mutual information strength. Variations induce curvature.*
 
 ---
 
 ## 5. Linearized Excitations and Lorentz Invariance
 
-![Linearized spectrum](image/linear_spectrum.png)  
+![Linearized spectrum](linear_spectrum.png)  
 *Figure 3: Linearized excitation spectrum. Solid blue = $\omega \propto k$; dashed red = small deviations.*
 
 ---
