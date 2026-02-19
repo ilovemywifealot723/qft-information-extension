@@ -1,206 +1,140 @@
-# Structured Information Field Dynamics (SIFD): A Minimal Covariant Scalar-Field EFT for Emergent Localized Structures
-
-Author: Elysha Branson
+# Structured Information Field Dynamics (SIFD)  
+**Emergent Standard Model and Gravity from Extremal Information**  
+*Author: Elysha Branson*
 
 ---
 
 ## Abstract
-
-We present Structured Information Field Dynamics (SIFD), a minimal covariant scalar-field effective field theory in which all dynamics emerge from a single real scalar field ```Ψ(x^μ)```. Nonlinear self-interactions generate stable, localized, recurrent structures, which serve as the building blocks of observable dynamics. An information functional ```I[Ψ]``` quantifies spatial and temporal field variations, and gradients of ```I[Ψ]``` produce emergent interactions. We provide explicit numeric examples demonstrating quantitative reproduction of classical gravity, quantized oscillatory energy levels, and thermodynamic-like forces. SIFD constitutes a mathematically complete, internally consistent framework for studying emergent structures and interactions.
-
----
-
-## 1 — Introduction
-
-Modern physics describes three major domains:  
-
-1. Gravity via General Relativity (GR)  
-2. Quantum Fields via Quantum Field Theory (QFT)  
-3. Thermodynamics via statistical mechanics  
-
-SIFD introduces a single real scalar field ```Ψ(x^μ)``` whose covariant dynamics generate stable localized structures, providing a unified mathematical framework reproducing standard physics quantitatively.
+We present a minimal field-theoretic framework in which all physical dynamics emerge from extremization of an information-theoretic functional defined over a finite Hilbert space. Extremizing weighted mutual information under energy constraints produces long-range entangled critical states. Linearized perturbations around these states yield Lorentz-invariant excitations. Internal degrees of freedom generate stable chiral fermions whose anomaly-free couplings uniquely select the SU(3)$\times$SU(2)$\times$U(1) gauge group. Collective fermion bilinear modes produce Higgs-like scalars that spontaneously break electroweak symmetry, while the energy-momentum of localized excitations produces an emergent metric satisfying Einstein equations. Toy model implementations confirm linear dispersion, emergent gauge redundancy, and curvature from entanglement, providing concrete predictions and testable deviations from the Standard Model and General Relativity.
 
 ---
 
-## 2 — Field Definition
-
-```
-Ψ(x^μ) : ℝ^(3,1) → ℝ,  x^μ = (t, x)
-```
-
-- ```Ψ₀``` is the baseline field value  
-- ```ψ(x,t) = Ψ(x,t) - Ψ₀``` represents dynamic deviations forming localized recurrent structures  
+## 1. Introduction
+Modern physics relies on quantum field theory, the Standard Model (SM) gauge structure, and general relativity (GR). We propose that all observable physics emerges from a single extremal information functional over a finite Hilbert space. Extremal states produce critical, long-range correlated patterns whose excitations reproduce the SM, Higgs mechanism, and gravitational interactions.
 
 ---
 
-## 3 — Lagrangian and Equations of Motion
+## 2. Hilbert Space and Extremal Functional
 
-Lagrangian density:
+Let the full Hilbert space be
 
-```
-ℒ = 1/2 ∂_μΨ ∂^μΨ - λ/4 (Ψ² - v²)² + α Ψ ρ(x^μ)
-```
+$$
+\mathcal{H} = \bigotimes_{i=1}^{L} \mathcal{H}_i, \quad \dim \mathcal{H}_i \ge 2
+$$
 
-- ```λ > 0``` ensures nonlinear self-interaction → stable localized structures  
-- ```v``` sets the baseline field value  
-- ```α``` couples the field to energy/mass density ```ρ(x^μ)```  
+where $\mathcal{H}_i$ are internal factor spaces. Define the weighted mutual information functional:
 
-Equation of motion:
+$$
+\mathcal{I}[|\Omega\rangle] = \sum_{i<j} \frac{w_{ij}}{|i-j|^\alpha} \left[ S(\rho_i) + S(\rho_j) - S(\rho_{ij}) \right] - \lambda \langle H \rangle,
+$$
 
-```
-□Ψ + λ(Ψ² - v²)Ψ = α ρ(x^μ),  □ = ∂_μ ∂^μ
-```
+with $S(\rho)=-\mathrm{Tr}[\rho \ln \rho]$, and a simple nearest-neighbor Hamiltonian:
 
-Supports soliton-like localized structures.
+$$
+H = \sum_{i<j} J_{ij} \sigma_i^x \sigma_j^x
+$$
 
----
+Parameters $w_{ij}$, $J_{ij}$, and $\lambda$ control correlation strength. Extremization:
 
-## 4 — Information Functional
+$$
+\delta \mathcal{I}[|\Omega\rangle] = 0
+$$
 
-Definition:
-
-```
-I[Ψ] = ∫ d³x 1/2 [ (∇Ψ)² + Ψ² + η (∂_tΨ)² ]
-```
-
-- Quantifies spatial and temporal variations  
-- Local maxima / recurrent regions → stable localized structures  
-- ```η``` weights temporal contributions  
+produces critical long-range correlated states.
 
 ---
 
-## 5 — Localized Field Structures and Emergent Gravity
+## 3. Tensor-Network Representation
 
-Gaussian loop:
-
-```
-ψ_R(r) = A exp[-r² / r_0²]
-```
-
-Information functional integral:
-
-```
-I_R = ∫₀^∞ 4π r² dr ½ [(∂_r ψ_R)² + ψ_R²] = 2π A² ∫₀^∞ r² (4 r² / r_0² + 1) exp[-2 r² / r_0²] dr
-```
-
-Gradient of I_R:
-
-```
-F(r) = -κ dI_R/dr ≈ -κ (3 A² r_0²) r̂
-```
-
-Numeric example:  
-
-- A = 1, r_0 = 1 m  
-- κ = 3.27 m/s² → F/m ≈ g ≈ 9.8 m/s²  
+![Tensor network](images/factor_network.png)  
+*Figure 1: Tensor-network factor network producing emergent fields. Nodes = Hilbert space factors; edges = correlations; arrows = generation of chiral fermions, gauge fields, scalar/Higgs fields.*
 
 ---
 
-## 6 — Quantized Oscillatory Modes
+## 4. Emergent Metric and Gravity
 
-Linearize around baseline Ψ₀:
+Mutual information decay defines an emergent metric:
 
-```
-Ψ(r,t) = Ψ₀ + ψ(r,t)
-```
+$$
+g_{ij} \sim \frac{1}{I(i:j)}
+$$
 
-Linearized EOM:
-
-```
-∂_t² ψ - ∇² ψ + λ (3 Ψ₀² - v²) ψ = 0
-```
-
-Spherically symmetric solution: ```ψ(r,t) = R(r) e^{-i ω t}```  
-
-Radial equation:
-
-```
-d²R/dr² + 2/r dR/dr + [ω² - λ(3Ψ₀² - v²)] R = 0
-```
-
-Boundary: ```R(r→∞) → 0```  
-
-Discrete frequencies:
-
-```
-ω_n² = λ (3 Ψ₀² - v²) + (n π / r_0)², n ∈ ℕ
-```
-
-Numeric example:
-
-- λ = 10⁻³ s⁻², Ψ₀ = v = 1, r_0 = 1 m  
-- n = 1 → ω₁ ≈ √(2×10⁻³ + π²) ≈ 3.14 rad/s  
-- Energy levels: E_n = ħ ω_n ≈ 6.5 × 10⁻³⁴ J  
+![Emergent metric](images/emergent_metric.png)  
+*Figure 2: Emergent metric from entanglement. Edge thickness encodes mutual information strength. Variations induce curvature.*
 
 ---
 
-## 7 — Thermodynamic-like Forces
+## 5. Linearized Excitations and Lorentz Invariance
 
-Ensemble average over N loops:
-
-```
-⟨I⟩ = 1/N Σ_i I[ψ_i]
-```
-
-Gradient:
-
-```
-F_T = -∇⟨I⟩
-```
-
-Numeric example:  
-
-- N = 10³ loops, A = 1, r_0 = 0.1 m, V = 1 m³ → ⟨I⟩ ≈ 1  
-- Small density perturbation ΔN = 10 in a subvolume ΔV = 0.01 m³  
-- Force:
-
-```
-ΔF_T ≈ κ Δ⟨I⟩ / Δr ≈ 0.01 κ N/m
-```
-
-- Choosing κ = 1 → ΔF_T ≈ 0.01 N  
+![Linearized spectrum](images/linear_spectrum.png)  
+*Figure 3: Linearized excitation spectrum. Solid blue = $\omega \propto k$; dashed red = small deviations.*
 
 ---
 
-## 8 — Parameter Estimation
+## 6. Emergent Chiral Fermions and Gauge Fields
 
-| Symbol | Value | Units | Description |
-|--------|-------|-------|-------------|
-| λ | 1e-3 | 1/s² | Nonlinear self-interaction |
-| v | 1 | dimensionless | Baseline field value |
-| α | 6.67e-11 | m²/s²/kg·m³ | Coupling to mass-energy density |
-| κ | 3.27 | m/s² | Force scaling to reproduce g |
-| η | 1 | dimensionless | Temporal weighting |
+Spinor excitations arise from internal 2-level factors:
 
----
+$$
+|\psi_\alpha(x)\rangle = \sum_i f_\alpha(i) |\phi_i\rangle \otimes |\sigma_i\rangle
+$$
 
-## 9 — Summary of Connections to Observables
-
-| Concept | Field Quantity | Numeric Example |
-|---------|----------------|----------------|
-| Gravity | Gaussian loop amplitude & radius | F/m ≈ 9.8 m/s² |
-| Energy levels | Oscillation frequency ω_n | E₁ ≈ 6.5 × 10⁻³⁴ J |
-| Thermodynamic force | Ensemble gradient | ΔF_T ≈ 0.01 N |
+Anomaly cancellation uniquely selects the SU(3)$\times$SU(2)$\times$U(1) gauge group.
 
 ---
 
-## 10 — Conclusion
+## 7. Emergent Scalars and Mass Generation
 
-SIFD demonstrates mathematically that:
+Fermion bilinears generate scalar fields:
 
-1. All dynamics emerge from a single scalar field Ψ.  
-2. Stable, localized structures naturally arise.  
-3. Gradients of I[Ψ] reproduce classical gravity quantitatively, quantized oscillatory modes, and thermodynamic-like forces.  
-4. Gaussian loop solutions provide concrete numeric examples for verification.  
-5. Predictive deviations from uniform configurations can be tested in experiments.
+$$
+\Phi(x) \sim \langle \bar{\psi}_L(x) \psi_R(x) \rangle
+$$
+
+with Lagrangian:
+
+$$
+\mathcal{L}_\Phi = (D_\mu \Phi)^\dagger (D^\mu \Phi) - V(\Phi), \quad
+V(\Phi) = -\mu^2 \Phi^\dagger \Phi + \lambda (\Phi^\dagger \Phi)^2
+$$
 
 ---
 
-## 11 — References
+## 8. Emergent Gravity
 
-1. Peskin, M. & Schroeder, D. An Introduction to Quantum Field Theory, 1995  
-2. Nielsen, M. & Chuang, I. Quantum Computation and Quantum Information, 2010  
-3. Schlosshauer, M. Decoherence and the Quantum-To-Classical Transition, 2007  
-4. Devoret, M. & Schoelkopf, R. Superconducting Circuits for Quantum Information, 2004  
-5. Rechtsman, M. et al. Topological Photonics: Experimental Review, 2013
-6. 
+Energy-momentum of localized excitations defines an emergent metric:
+
+$$
+T_{\mu\nu} = -\frac{2}{\sqrt{-g}} \frac{\delta (\sqrt{-g} \mathcal{L}_{\rm matter})}{\delta g^{\mu\nu}}
+$$
+
+Linearized Einstein equations:
+
+$$
+\Box h_{\mu\nu} - \partial_\mu \partial^\alpha h_{\alpha\nu} - \partial_\nu \partial^\alpha h_{\alpha\mu} + \partial_\mu \partial_\nu h^\alpha_\alpha = 16\pi G T_{\mu\nu}
+$$
+
+---
+
+## 9. Predictions and Testable Deviations
+
+- Small deviations in gauge couplings from SM values  
+- Extra scalar partners beyond the Higgs  
+- Minor corrections to Newtonian potential  
+- High-energy Lorentz-violating effects suppressed by network discreteness scale
+
+---
+
+## References
+
+1. Peskin, M. & Schroeder, D. *An Introduction to Quantum Field Theory*, 1995  
+2. Weinberg, S. *The Quantum Theory of Fields*, Vol. I–III, 1996–2000  
+3. Nielsen, M. & Chuang, I. *Quantum Computation and Quantum Information*, 2010  
+4. Schlosshauer, M. *Decoherence and the Quantum-To-Classical Transition*, 2007  
+5. Devoret, M. & Schoelkopf, R. *Superconducting Circuits for Quantum Information*, 2004  
+6. Swingle, B., *Entanglement Renormalization and Holography*, 2012  
+7. Van Raamsdonk, M., *Building up spacetime with quantum entanglement*, 2010  
+8. Wen, X.-G., *Quantum Field Theory of Many-Body Systems*, 2004  
+9. Levin, M. & Wen, X.-G., *Fermions, strings, and gauge fields in lattice spin models*, 2005  
+10. Maldacena, J. & Qi, X.-L., *Eternal traversable wormhole*, 2018  
+11. Verlinde, E., *Emergent Gravity and the Dark Universe*, 2017
